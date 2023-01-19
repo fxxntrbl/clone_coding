@@ -15,10 +15,10 @@ class MyHomePage extends GetView<HomePageController> {
             const Text(
               'You have pushed the button this many times:',
             ),
-            Text(
-              '${controller.counter}',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            Obx(() => Text(
+                  '${controller.counter.value}',
+                  style: Theme.of(context).textTheme.headline4,
+                )),
           ],
         ),
       ),
